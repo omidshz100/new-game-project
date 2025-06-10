@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpmbjcpy00vha"]
+
+[ext_resource type="Script" uid="uid://d3lfyxu4e0h0d" path="res://SnakeGame.gd" id="1_juaus"]
+
+[node name="SnakeGame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_juaus")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScoreLabel" type="Label" parent="UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score: 0"
+
+[node name="StartPanel" type="Panel" parent="UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StartButton" type="Button" parent="UI/StartPanel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Start Game"
+
+[node name="GameOverPanel" type="Panel" parent="UI"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FinalScoreLabel" type="Label" parent="UI/GameOverPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Final Score: 0"
+
+[node name="RestartButton" type="Button" parent="UI/GameOverPanel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Restart"
